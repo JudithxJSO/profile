@@ -82,7 +82,7 @@ body {
 
 /* Content styles for the main page */
 #mainPage {
-    background-image: url('/img/Profile-card-background-2.png');
+    background-image: url('/img/Profile-card-background-2.png;');
         opacity: 0;
         transition: opacity 1s ease-in;
 background-position: center;
