@@ -1,0 +1,150 @@
+html, body{
+    background-color: #000;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+}
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/*Loading screen components */
+#loadingPage .loading-screen {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/Profile-card-background.jpg');
+    opacity:1.0 ;   
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*loading spinner*/
+.loader{
+    border: 4px solid rgba(255, 51, 0, 0.2); /* Adjust thickness here */
+    border-top: 4px solid #ff7300; /* Adjust spinner color here */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite; /* Adjust speed here (1s = 1 second) */
+    margin-left:45%;
+    margin-top: 200px;
+    position: relative;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/*Loading text*/
+.loading{
+    font-size: 20px;
+    color:#ff7300;
+    position: relative;
+    font-family:'VT323';
+    font-weight: lighter;
+    margin-left: 45%;
+}
+#loadingPage {
+    display: block;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+#loadingPage.fade-out {
+    opacity: 0;
+}
+#mainPage {
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    
+}
+#mainPage.fade-in {
+    background-color: black;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Content styles for the main page */
+#mainPage {
+    background-image: url(/images/Profile-card-background-2.jpg);
+        opacity: 0;
+        transition: opacity 1s ease-in;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    font-family: 'VT323';
+    font-size: 2em;
+    
+}
+
+/*Content styles for slider*/
+#mainPage .main-content {
+      /* Adjust these styles based on your layout */
+  padding-top: 10px;
+  
+}
+#mainPage .main-content {
+    /* Other styles */
+    text-align: left !important; /* Align text to the left */
+    /* Other styles */
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust darkness here */
+    z-index: 1;
+    opacity: 0.5;
+    transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+
+
+/* To hide-show the loading bar*/
+
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+
+
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .loading-screen {
+        background-size: cover;
+        
+    }
+}
